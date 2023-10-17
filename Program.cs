@@ -3,26 +3,21 @@
 // 782 -> 8
 // 918 -> 1
 
-// Console.Write("Введите число: ");
-// string stringNumber = Console.ReadLine();
-// // Строчка - массив символов
-// int number;
-// // // // TryParse(строчка, out переменная для результата)
-// bool isNumber = int.TryParse(stringNumber, out number);
-// // // // Если isNumber == True, значит строчка stringNumber 
-// // // // состоит ТОЛЬКО из цифр; False - в строке есть буквы.
-// // // // Если в stringNumber только цифры, то 
-// // // // в переменную number попадет само число; иначе - 0
-// Console.WriteLine($"Длина строки(кол-во символов): {stringNumber.Length}");
-// if (isNumber && stringNumber.Length >= 3) // isNumber == True
-//  {
-//      Console.WriteLine("Ваша строчка состоит ТОЛЬКО из цифр");
-//      Console.WriteLine($"{stringNumber} -> {stringNumber[1]}");
-//  }
-//  else
-//  {
-//      Console.WriteLine("В строчке присутсвуют буквы ИЛИ длина строки < 3 символов");
-//  }
+ Console.Write("Введите трехзначное число: ");
+ string stringNumber = Console.ReadLine();
+
+int number;
+bool isNumber = int.TryParse(stringNumber, out number);
+Console.WriteLine($"Длина строки(кол-во символов): {stringNumber.Length}");
+if (isNumber && stringNumber.Length == 3) // isNumber == True
+  {
+      Console.WriteLine("Ваша строчка состоит ТОЛЬКО из цифр");
+      Console.WriteLine($"{stringNumber} -> {stringNumber[1]}");
+  }
+  else
+  {
+      Console.WriteLine("В строчке присутсвуют буквы ИЛИ длина строки не 3 символа");
+  }
 
 
 //  Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
@@ -36,9 +31,8 @@
 
 // bool isNumber = int.TryParse(stringNumber, out number);
 // Console.WriteLine($"Длина строки(кол-во символов): {stringNumber.Length}");
-// if (isNumber && stringNumber.Length >= 3) // isNumber == True
+// if (isNumber && stringNumber.Length >= 3) 
 //  {
-//      Console.WriteLine("Ваша строчка состоит ТОЛЬКО из цифр");
 //      Console.WriteLine($"{stringNumber} -> {stringNumber[2]}");
 //  }
 //  else
@@ -53,17 +47,17 @@
 // 7 -> да
 // 1 -> нет
 
-Console.Write("Введите номер дня недели: ");
-int numberDay = int.Parse(Console.ReadLine());
+// Console.Write("Введите номер дня недели: ");
+// int numberDay = int.Parse(Console.ReadLine());
 
-// Console.WriteLine(numberDay);
-if (numberDay >=1 && numberDay <=5) 
-   {
-     Console.WriteLine($"{numberDay} -> нет");
-   }
-else if (numberDay >=6 && numberDay <=7)
-   {
-     Console.WriteLine($"{numberDay} -> да");
-   }  
+// // Console.WriteLine(numberDay);
+// if (numberDay >=1 && numberDay <=5) 
+//    {
+//      Console.WriteLine($"{numberDay} -> нет");
+//    }
+// else if (numberDay >=6 && numberDay <=7)
+//    {
+//      Console.WriteLine($"{numberDay} -> да");
+//    }  
 
-else    Console.WriteLine($"{numberDay}  -> такого дня недели не существует"); 
+// else    Console.WriteLine($"{numberDay}  -> такого дня недели не существует"); 
